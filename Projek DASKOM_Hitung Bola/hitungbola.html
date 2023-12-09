@@ -1,0 +1,158 @@
+<html>
+
+<head>
+
+<title>Muhammad Lucky Harvi 2310314059</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+#panel {
+display:none;
+}
+</style>
+
+<script> 
+$(document).ready(function(){
+  $("#mulai").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  text-align: left;
+  background-color: beige;
+  border: solid 1px beige;
+}
+</style>
+
+<script> 
+$(document).ready(function(){
+  $("#tutup").click(function(){
+    $("#panel").slideUp("slow");
+  });
+});
+</script>
+
+</head>
+
+<body style="background-color:beige;">
+
+<div id="start" style="text-align:center;"><button style="text-align:center; font-family:Lucida Calligraphy; font-size:25;background-color:green;border:1pt;cursor: pointer;"><div id="mulai">Open</div></button>
+
+<div id="panel">
+
+<h1 style="text-align:center;"><font style="font-family:Lucida Calligraphy;font-size:25;background-color:beige;border:none;cursor: pointer;">Bola Pejal</h1>
+
+<hr><hr><hr><hr><br>
+
+<div style="text-align:center;">
+<font style=cursor:pointer;border:none;background-color:beige;font-size:17;font-family:TimesNewRoman;><b>Mencari Nilai <i style="color:blue;">Luas Permukaan</i> dan <i style="color:blue;">Volume</i></b>
+</div><br><br>
+
+
+ <div>
+ <font style="cursor:pointer;border:none;background-color:beige;font-family:TimesNewRoman;font-size:16"><b style="color:green;">Masukan Nilai Jari - Jari (r) ~> </b><input type="text" id="r" placeholder="masukan nilai (input)"> cm
+ </div><br><br> 
+ 
+<div>
+
+   <button onClick="LP()">Luas Permukaan</button>  
+    <input type="text" id="lp" placeholder="output"> cm 
+<br>
+   <button onClick="V()">Volume</button>  
+    <input type="text" id="v" placeholder="output"> cm<br><br><br>
+    
+</div>    
+     
+<hr><hr>  
+<br>
+<div style="text-align:center;">
+<font style=cursor:pointer;border:none;background-color:beige;font-size:17;><b>Mencari Nilai <i style="color:blue;">Jari - Jari</i></b>
+</div><br><br>
+
+
+ <div>
+ <font style="cursor:pointer;border:none;background-color:beige;font-family:TimesNewRoman;font-size:16"><b style="color:green;">Jika Diketahui <i>Luas Permukaannya</i> ~> </b><input type="text" id="dlp" placeholder="masukan nilai (input)"> cm
+ </div><br><br>
+
+
+<div>
+
+   <button onClick="RDLP()">Jari - Jari</button>  
+    <input type="text" id="rdlp" placeholder="output"> cm<br><br><br>
+    
+</div>    
+
+<hr>
+ <div>
+ <font style="cursor:pointer;border:none;background-color:beige;font-family:TimesNewRoman;font-size:16"><b style="color:green;">Jika Diketahui <i>Volumenya</i> ~> </b><input type="text" id="dv" placeholder="masukan nilai (input)"> cm
+ </div><br><br>
+  
+ 
+<div>  
+
+   <button onClick="RDV()">Jari - Jari</button>  
+    <input type="text" id="rdv" placeholder="output"> cm<br><br><br>
+    
+</div>    
+     
+
+<div id="tutup" style="text-align:center;">
+<a href="definisi.html"><button style="font-family:Lucida Calligraphy;background-color:red;border:7;cursor:pointer;font-size:17"><b>Close</b></button></div></a>
+
+
+<script>
+
+ function LP() 
+  {
+  
+   var r = $('#r').val();
+   var lp = Math.pow(r, 2) * 4 * Math.PI;
+   
+   $('#lp').val(lp);
+ 
+  }
+  
+  
+ function V()
+  {
+  
+   var r = $('#r').val();
+   var v = Math.pow(r, 3) * 4 / 3 * Math.PI;
+   
+   $('#v').val(v);
+   
+  }
+  
+  
+  
+ function RDLP()
+  {
+  
+   var dlp = $('#dlp').val();
+   var rdlp = Math.sqrt(dlp / (4 * Math.PI));
+   
+   $('#rdlp').val(rdlp);
+   
+  }
+ 
+ 
+ 
+ function RDV()
+  {
+  
+   var dv = $('#dv').val();
+   var rdv = Math.cbrt(dv * 3 / (4 * Math.PI));
+   
+   $('#rdv').val(rdv);
+   
+  }
+ 
+ 
+</script>
+
+</body>
+
+</html>
